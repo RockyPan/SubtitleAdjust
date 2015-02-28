@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CAEE7D41AA1A2F60082F5CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D31AA1A2F60082F5CE /* AppDelegate.m */; };
+		5CAEE7D61AA1A2F60082F5CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D51AA1A2F60082F5CE /* main.m */; };
+		5CAEE7D81AA1A2F70082F5CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D71AA1A2F70082F5CE /* Images.xcassets */; };
+		5CAEE7DB1AA1A2F70082F5CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D91AA1A2F70082F5CE /* MainMenu.xib */; };
+		5CAEE7E71AA1A2F70082F5CE /* SubtitleAdjustTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEE7E61AA1A2F70082F5CE /* SubtitleAdjustTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CAEE7E11AA1A2F70082F5CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CAEE7C51AA1A2F60082F5CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CAEE7CC1AA1A2F60082F5CE;
+			remoteInfo = SubtitleAdjust;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CAEE7CD1AA1A2F60082F5CE /* SubtitleAdjust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubtitleAdjust.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CAEE7D11AA1A2F60082F5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CAEE7D21AA1A2F60082F5CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5CAEE7D31AA1A2F60082F5CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5CAEE7D51AA1A2F60082F5CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CAEE7D71AA1A2F70082F5CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5CAEE7DA1AA1A2F70082F5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5CAEE7E01AA1A2F70082F5CE /* SubtitleAdjustTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitleAdjustTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CAEE7E51AA1A2F70082F5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CAEE7E61AA1A2F70082F5CE /* SubtitleAdjustTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubtitleAdjustTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CAEE7CA1AA1A2F60082F5CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CAEE7DD1AA1A2F70082F5CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CAEE7C41AA1A2F60082F5CE = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7CF1AA1A2F60082F5CE /* SubtitleAdjust */,
+				5CAEE7E31AA1A2F70082F5CE /* SubtitleAdjustTests */,
+				5CAEE7CE1AA1A2F60082F5CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CAEE7CE1AA1A2F60082F5CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7CD1AA1A2F60082F5CE /* SubtitleAdjust.app */,
+				5CAEE7E01AA1A2F70082F5CE /* SubtitleAdjustTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CAEE7CF1AA1A2F60082F5CE /* SubtitleAdjust */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7D21AA1A2F60082F5CE /* AppDelegate.h */,
+				5CAEE7D31AA1A2F60082F5CE /* AppDelegate.m */,
+				5CAEE7D71AA1A2F70082F5CE /* Images.xcassets */,
+				5CAEE7D91AA1A2F70082F5CE /* MainMenu.xib */,
+				5CAEE7D01AA1A2F60082F5CE /* Supporting Files */,
+			);
+			path = SubtitleAdjust;
+			sourceTree = "<group>";
+		};
+		5CAEE7D01AA1A2F60082F5CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7D11AA1A2F60082F5CE /* Info.plist */,
+				5CAEE7D51AA1A2F60082F5CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CAEE7E31AA1A2F70082F5CE /* SubtitleAdjustTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7E61AA1A2F70082F5CE /* SubtitleAdjustTests.m */,
+				5CAEE7E41AA1A2F70082F5CE /* Supporting Files */,
+			);
+			path = SubtitleAdjustTests;
+			sourceTree = "<group>";
+		};
+		5CAEE7E41AA1A2F70082F5CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEE7E51AA1A2F70082F5CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CAEE7CC1AA1A2F60082F5CE /* SubtitleAdjust */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CAEE7EA1AA1A2F70082F5CE /* Build configuration list for PBXNativeTarget "SubtitleAdjust" */;
+			buildPhases = (
+				5CAEE7C91AA1A2F60082F5CE /* Sources */,
+				5CAEE7CA1AA1A2F60082F5CE /* Frameworks */,
+				5CAEE7CB1AA1A2F60082F5CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SubtitleAdjust;
+			productName = SubtitleAdjust;
+			productReference = 5CAEE7CD1AA1A2F60082F5CE /* SubtitleAdjust.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CAEE7DF1AA1A2F70082F5CE /* SubtitleAdjustTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CAEE7ED1AA1A2F70082F5CE /* Build configuration list for PBXNativeTarget "SubtitleAdjustTests" */;
+			buildPhases = (
+				5CAEE7DC1AA1A2F70082F5CE /* Sources */,
+				5CAEE7DD1AA1A2F70082F5CE /* Frameworks */,
+				5CAEE7DE1AA1A2F70082F5CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CAEE7E21AA1A2F70082F5CE /* PBXTargetDependency */,
+			);
+			name = SubtitleAdjustTests;
+			productName = SubtitleAdjustTests;
+			productReference = 5CAEE7E01AA1A2F70082F5CE /* SubtitleAdjustTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CAEE7C51AA1A2F60082F5CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = TGD;
+				TargetAttributes = {
+					5CAEE7CC1AA1A2F60082F5CE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					5CAEE7DF1AA1A2F70082F5CE = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 5CAEE7CC1AA1A2F60082F5CE;
+					};
+				};
+			};
+			buildConfigurationList = 5CAEE7C81AA1A2F60082F5CE /* Build configuration list for PBXProject "SubtitleAdjust" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CAEE7C41AA1A2F60082F5CE;
+			productRefGroup = 5CAEE7CE1AA1A2F60082F5CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CAEE7CC1AA1A2F60082F5CE /* SubtitleAdjust */,
+				5CAEE7DF1AA1A2F70082F5CE /* SubtitleAdjustTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CAEE7CB1AA1A2F60082F5CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CAEE7D81AA1A2F70082F5CE /* Images.xcassets in Resources */,
+				5CAEE7DB1AA1A2F70082F5CE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CAEE7DE1AA1A2F70082F5CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CAEE7C91AA1A2F60082F5CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CAEE7D61AA1A2F60082F5CE /* main.m in Sources */,
+				5CAEE7D41AA1A2F60082F5CE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CAEE7DC1AA1A2F70082F5CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CAEE7E71AA1A2F70082F5CE /* SubtitleAdjustTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CAEE7E21AA1A2F70082F5CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CAEE7CC1AA1A2F60082F5CE /* SubtitleAdjust */;
+			targetProxy = 5CAEE7E11AA1A2F70082F5CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5CAEE7D91AA1A2F70082F5CE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CAEE7DA1AA1A2F70082F5CE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CAEE7E81AA1A2F70082F5CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5CAEE7E91AA1A2F70082F5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5CAEE7EB1AA1A2F70082F5CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubtitleAdjust/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5CAEE7EC1AA1A2F70082F5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubtitleAdjust/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5CAEE7EE1AA1A2F70082F5CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SubtitleAdjustTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SubtitleAdjust.app/Contents/MacOS/SubtitleAdjust";
+			};
+			name = Debug;
+		};
+		5CAEE7EF1AA1A2F70082F5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SubtitleAdjustTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SubtitleAdjust.app/Contents/MacOS/SubtitleAdjust";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CAEE7C81AA1A2F60082F5CE /* Build configuration list for PBXProject "SubtitleAdjust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAEE7E81AA1A2F70082F5CE /* Debug */,
+				5CAEE7E91AA1A2F70082F5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CAEE7EA1AA1A2F70082F5CE /* Build configuration list for PBXNativeTarget "SubtitleAdjust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAEE7EB1AA1A2F70082F5CE /* Debug */,
+				5CAEE7EC1AA1A2F70082F5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5CAEE7ED1AA1A2F70082F5CE /* Build configuration list for PBXNativeTarget "SubtitleAdjustTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAEE7EE1AA1A2F70082F5CE /* Debug */,
+				5CAEE7EF1AA1A2F70082F5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CAEE7C51AA1A2F60082F5CE /* Project object */;
+}
