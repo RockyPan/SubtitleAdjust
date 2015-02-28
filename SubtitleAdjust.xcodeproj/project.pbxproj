@@ -12,6 +12,7 @@
 		5CAEE7D81AA1A2F70082F5CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D71AA1A2F70082F5CE /* Images.xcassets */; };
 		5CAEE7DB1AA1A2F70082F5CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEE7D91AA1A2F70082F5CE /* MainMenu.xib */; };
 		5CAEE7E71AA1A2F70082F5CE /* SubtitleAdjustTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEE7E61AA1A2F70082F5CE /* SubtitleAdjustTests.m */; };
+		5CAEE7F11AA1AE400082F5CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAEE7F01AA1AE400082F5CE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		5CAEE7E01AA1A2F70082F5CE /* SubtitleAdjustTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitleAdjustTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAEE7E51AA1A2F70082F5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CAEE7E61AA1A2F70082F5CE /* SubtitleAdjustTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubtitleAdjustTests.m; sourceTree = "<group>"; };
+		5CAEE7F01AA1AE400082F5CE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAEE7F11AA1AE400082F5CE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 		5CAEE7C41AA1A2F60082F5CE = {
 			isa = PBXGroup;
 			children = (
+				5CAEE7F01AA1AE400082F5CE /* AVFoundation.framework */,
 				5CAEE7CF1AA1A2F60082F5CE /* SubtitleAdjust */,
 				5CAEE7E31AA1A2F70082F5CE /* SubtitleAdjustTests */,
 				5CAEE7CE1AA1A2F60082F5CE /* Products */,

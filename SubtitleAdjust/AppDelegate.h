@@ -10,6 +10,25 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (weak) IBOutlet NSTextField *labCurrent;
+@property (weak) IBOutlet NSTextField *labNext;
+@property (weak) IBOutlet NSTextField *labIndex;
+@property (weak) IBOutlet NSButton *btnSave;
+@property (weak) IBOutlet NSButton *btnPlay;
+@property (weak) IBOutlet NSButton *btnMoveForeward;
+@property (weak) IBOutlet NSButton *btnMoveBackward;
+@property (weak) IBOutlet NSButton *btnMerge;
+@property (weak) IBOutlet NSButton *btnPreviews;
+@property (weak) IBOutlet NSButton *btnNext;
+
+- (IBAction)btnOpen:(id)sender;
+- (IBAction)btnSave:(id)sender;
+- (IBAction)btnPlay:(id)sender;
+- (IBAction)btnMoveForeward:(id)sender;
+- (IBAction)btnMoveBackward:(id)sender;
+- (IBAction)btnMerge:(id)sender;
+- (IBAction)btnPreview:(id)sender;
+- (IBAction)btnNext:(id)sender;
 
 @end
 
