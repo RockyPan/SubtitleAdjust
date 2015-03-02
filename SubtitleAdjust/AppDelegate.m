@@ -83,8 +83,8 @@ bool _fileOpened;
             NSTimeInterval interval = [date timeIntervalSinceDate:begin];
             
             [_subtitles addObject:
-             @{@"time" : [NSNumber numberWithDouble:interval],
-               @"subtitle" : [item substringFromIndex:10]}];
+             [@{@"time" : [NSNumber numberWithDouble:interval],
+               @"subtitle" : [item substringFromIndex:10]} mutableCopy]];
         }
     }];
     
@@ -151,11 +151,13 @@ bool _fileOpened;
 }
 
 - (IBAction)btnMoveForeward:(id)sender {
-    
+    NSNumber *old = _subtitles[_index][@"time"];
+    _subtitles[_index][@"time"] = [NSNumber numberWithDouble:old.doubleValue + 0.1];
 }
 
 - (IBAction)btnMoveBackward:(id)sender {
-    
+    NSNumber *old = _subtitles[_index][@"time"];
+    _subtitles[_index][@"time"] = [NSNumber numberWithDouble:(old.doubleValue - 0.1)];
 }
 
 - (IBAction)btnMerge:(id)sender {
