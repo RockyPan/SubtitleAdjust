@@ -28,6 +28,12 @@ bool _fileOpened;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    _player = NULL;
+    _timer = NULL;
+    _subtitles = NULL;
+    _doesEdit = false;
+    _fileOpened = false;
+    _index = 1;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -104,6 +110,19 @@ bool _fileOpened;
     [self.btnNext setEnabled:_fileOpened && _index != _subtitles.count - 1];
 }
 
+- (void)playDone {
+    [_player pause];
+}
+
+- (void)playFrom:(NSTimeInterval)start to:(NSTimeInterval)end {
+    [_player pause];
+    [_timer invalidate];
+    [_player setCurrentTime:start];
+    NSTimeInterval duration = end - start;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(playDone) userInfo:nil repeats:NO];
+    [_player resume];
+}
+
 - (IBAction)btnOpen:(id)sender {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     
@@ -124,7 +143,11 @@ bool _fileOpened;
 }
 
 - (IBAction)btnPlay:(id)sender {
+    //PK 因为在btnNext中做了处理，这里不用再判断index会越界
+    NSTimeInterval curStart = ((NSNumber *)(_subtitles[_index - 1][@"time"])).doubleValue;
+    NSTimeInterval curEnd = ((NSNumber *)(_subtitles[_index][@"time"])).doubleValue;
     
+    [self playFrom:curStart to:curEnd];
 }
 
 - (IBAction)btnMoveForeward:(id)sender {
@@ -143,6 +166,34 @@ bool _fileOpened;
 }
 
 - (IBAction)btnNext:(id)sender {
+    ++_index;
+    [self initStatus];
+}
+
+- (IBAction)btnPlayCur:(id)sender {
+    //PK 播放当前名字的最后5秒，如果本句小于5秒就插整句
+    //PK 因为在btnNext中做了处理，这里不用再判断index会越界
+    NSTimeInterval curStart = ((NSNumber *)(_subtitles[_index - 1][@"time"])).doubleValue;
+    NSTimeInterval curEnd = ((NSNumber *)(_subtitles[_index][@"time"])).doubleValue;
+    NSTimeInterval curPos = curEnd - 3.0;
+    curPos = curPos < curStart ? curStart : curPos;
+    
+    [self playFrom:curPos to:curEnd];
+}
+
+- (IBAction)btnPlayNext:(id)sender {
+    NSTimeInterval curStart = ((NSNumber *)(_subtitles[_index][@"time"])).doubleValue;
+    NSTimeInterval curEnd = 0.0;
+    //PK 如果这部分已经是最后一句，结束部分要特殊处理
+    if (_index + 1 == _subtitles.count) {
+        curEnd = _player.duration;
+    } else {
+        curEnd = ((NSNumber *)(_subtitles[_index + 1][@"time"])).doubleValue;
+    }
+    NSTimeInterval curPos = curStart + 3.0;
+    curPos = curPos > curEnd ? curEnd : curPos;
+    
+    [self playFrom:curStart to:curPos];
 }
 
 @end

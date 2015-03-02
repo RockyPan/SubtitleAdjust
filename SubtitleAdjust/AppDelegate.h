@@ -20,6 +20,8 @@
 @property (weak) IBOutlet NSButton *btnMerge;
 @property (weak) IBOutlet NSButton *btnPreviews;
 @property (weak) IBOutlet NSButton *btnNext;
+@property (weak) IBOutlet NSButton *btnPlayCur;
+@property (weak) IBOutlet NSButton *btnPlayNext;
 
 - (IBAction)btnOpen:(id)sender;
 - (IBAction)btnSave:(id)sender;
@@ -29,6 +31,8 @@
 - (IBAction)btnMerge:(id)sender;
 - (IBAction)btnPreview:(id)sender;
 - (IBAction)btnNext:(id)sender;
+- (IBAction)btnPlayCur:(id)sender;
+- (IBAction)btnPlayNext:(id)sender;
 
 @end
 
