@@ -75,7 +75,7 @@ bool _fileOpened;
     
     [content enumerateObjectsUsingBlock:^(NSString * item, NSUInteger idx, BOOL *stop) {
         NSDateFormatter * df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"mm:ss.SS"];
+        [df setDateFormat:@"mm:ss:SS"];
         NSDate * begin = [df dateFromString:@"00:00.00"];
         if ([item length] < 11) return;
         if (([item characterAtIndex:0] == '[') && ([item characterAtIndex:9] == ']')) {
@@ -88,7 +88,7 @@ bool _fileOpened;
         }
     }];
     
-    NSLog(@"%@", _subtitles);
+    //NSLog(@"%@", _subtitles);
 }
 
 - (void)initStatus {
@@ -140,6 +140,15 @@ bool _fileOpened;
 }
 
 - (IBAction)btnSave:(id)sender {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"mm:ss:SS"];
+    NSDate *begin = [df dateFromString:@"00:00:00"];
+    [_subtitles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSMutableDictionary * item = (NSMutableDictionary*)obj;
+        NSDate * date = [begin dateByAddingTimeInterval:((NSNumber*)(item[@"time"])).doubleValue];
+        NSString * line = [NSString stringWithFormat:@"%@%@", [df stringFromDate:date], item[@"subtitle"] ];
+        NSLog(@"%@", line);
+    }];
 }
 
 - (IBAction)btnPlay:(id)sender {
@@ -153,11 +162,15 @@ bool _fileOpened;
 - (IBAction)btnMoveForeward:(id)sender {
     NSNumber *old = _subtitles[_index][@"time"];
     _subtitles[_index][@"time"] = [NSNumber numberWithDouble:old.doubleValue + 0.1];
+    _doesEdit = true;
+    [self initStatus];
 }
 
 - (IBAction)btnMoveBackward:(id)sender {
     NSNumber *old = _subtitles[_index][@"time"];
     _subtitles[_index][@"time"] = [NSNumber numberWithDouble:(old.doubleValue - 0.1)];
+    _doesEdit = true;
+    [self initStatus];
 }
 
 - (IBAction)btnMerge:(id)sender {
