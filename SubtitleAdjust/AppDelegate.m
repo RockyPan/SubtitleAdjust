@@ -75,7 +75,7 @@ bool _fileOpened;
     
     [content enumerateObjectsUsingBlock:^(NSString * item, NSUInteger idx, BOOL *stop) {
         NSDateFormatter * df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"mm:ss:SS"];
+        [df setDateFormat:@"mm:ss.SS"];
         NSDate * begin = [df dateFromString:@"00:00.00"];
         if ([item length] < 11) return;
         if (([item characterAtIndex:0] == '[') && ([item characterAtIndex:9] == ']')) {
@@ -146,7 +146,7 @@ bool _fileOpened;
     [_subtitles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSMutableDictionary * item = (NSMutableDictionary*)obj;
         NSDate * date = [begin dateByAddingTimeInterval:((NSNumber*)(item[@"time"])).doubleValue];
-        NSString * line = [NSString stringWithFormat:@"%@%@", [df stringFromDate:date], item[@"subtitle"] ];
+        NSString * line = [NSString stringWithFormat:@"[%@]%@", [df stringFromDate:date], item[@"subtitle"] ];
         NSLog(@"%@", line);
     }];
 }
