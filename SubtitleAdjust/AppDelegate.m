@@ -13,7 +13,7 @@
 
 @property (weak) IBOutlet NSWindow *window;
 
-@property (nonatomic, copy) NSString *filename;
+//@property (nonatomic, copy) NSString *lrcFilename;
 
 @end
 
@@ -23,6 +23,7 @@ NSSound *_player;
 NSTimer *_timer;
 bool _doesEdit;
 bool _fileOpened;
+NSURL *_lrcURL;
 
 @implementation AppDelegate
 
@@ -43,6 +44,7 @@ bool _fileOpened;
 - (void)openMP3File:(NSURL *)mp3Filename {
     [self.window setTitle:[NSString stringWithFormat:@"SubtitleAdjust - %@", mp3Filename.lastPathComponent]];
     NSURL * lrcFilename = [mp3Filename.URLByDeletingPathExtension URLByAppendingPathExtension:@"lrc"];
+    _lrcURL = lrcFilename;
     NSLog(@"%@", mp3Filename);
     NSLog(@"%@", lrcFilename);
     
@@ -143,12 +145,19 @@ bool _fileOpened;
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"mm:ss:SS"];
     NSDate *begin = [df dateFromString:@"00:00:00"];
-    [_subtitles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSMutableDictionary * item = (NSMutableDictionary*)obj;
-        NSDate * date = [begin dateByAddingTimeInterval:((NSNumber*)(item[@"time"])).doubleValue];
-        NSString * line = [NSString stringWithFormat:@"[%@]%@", [df stringFromDate:date], item[@"subtitle"] ];
-        NSLog(@"%@", line);
-    }];
+    NSMutableString *content = [[NSMutableString alloc] init];
+//    [_subtitles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSMutableDictionary * item = (NSMutableDictionary*)obj;
+//        NSDate * date = [begin dateByAddingTimeInterval:((NSNumber*)(item[@"time"])).doubleValue];
+//        [content appendFormat:@"[%@]%@\n", [df stringFromDate:date], item[@"subtitle"]];
+//        NSString * line = [NSString stringWithFormat:@"[%@]%@", [df stringFromDate:date], item[@"subtitle"] ];
+//        NSLog(@"%@", line);
+//    }];
+    for (NSDictionary *obj in _subtitles) {
+        NSDate *date = [begin dateByAddingTimeInterval:((NSNumber*)(obj[@"time"])).doubleValue];
+        [content appendFormat:@"[%@]%@\n", [df stringFromDate:date], obj[@"subtitle"]];
+    }
+    [content writeToURL:_lrcURL atomically:YES encoding:NSASCIIStringEncoding error:nil];
 }
 
 - (IBAction)btnPlay:(id)sender {
