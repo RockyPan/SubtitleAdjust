@@ -143,7 +143,7 @@ NSURL *_lrcURL;
 
 - (IBAction)btnSave:(id)sender {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"mm:ss:SS"];
+    [df setDateFormat:@"mm:ss.SS"];
     NSDate *begin = [df dateFromString:@"00:00:00"];
     NSMutableString *content = [[NSMutableString alloc] init];
 //    [_subtitles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -153,11 +153,13 @@ NSURL *_lrcURL;
 //        NSString * line = [NSString stringWithFormat:@"[%@]%@", [df stringFromDate:date], item[@"subtitle"] ];
 //        NSLog(@"%@", line);
 //    }];
-    for (NSDictionary *obj in _subtitles) {
+    for (NSMutableDictionary *obj in _subtitles) {
         NSDate *date = [begin dateByAddingTimeInterval:((NSNumber*)(obj[@"time"])).doubleValue];
         [content appendFormat:@"[%@]%@\n", [df stringFromDate:date], obj[@"subtitle"]];
     }
-    [content writeToURL:_lrcURL atomically:YES encoding:NSASCIIStringEncoding error:nil];
+    NSError *err = nil;
+    BOOL res = [content writeToURL:_lrcURL atomically:YES encoding:NSUTF8StringEncoding error:&err];
+    if (!res) NSLog(@"error: %@", err);
 }
 
 - (IBAction)btnPlay:(id)sender {
